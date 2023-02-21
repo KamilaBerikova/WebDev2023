@@ -1,0 +1,27 @@
+<div *ngIf="product" class="card" style="width: 18rem;">
+  <div class="img__container">
+    <a [routerLink]="['/all-products', product.id]">
+      <img [src]="product.imageURL" class="card-img-top" [alt]="product.id">
+    </a>
+  </div>
+  <div class="card-body card__content">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Kaspi rating: {{ product.rating }}</li>
+  </ul>
+  <div class="card-body card__body">
+    <button
+      type="button"
+      class="btn btn-warning"
+      (click)="notifyAlert()"
+    >Notify Me</button>
+
+    <button
+      type="button"
+      (click)="shareViaWhatsapp()"
+      class="btn btn-success"
+    >Share Whatsupp</button>
+  </div>
+</div>
