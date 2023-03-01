@@ -1,0 +1,27 @@
+<div *ngIf="product" id="product__detail__container">
+    <h1 class="product__name">{{ product.name }}</h1>
+    <div class="product__info">
+        <div class="product__description">{{ product.description }}</div>
+        <h2>Mark: {{ product.rating }} out of 5</h2>
+    </div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-item active" data-bs-interval="2000">
+            <img [src]="product.imageURL" class="d-block w-100" [alt]="product.imageURL">
+        </div>
+        <div *ngIf="product.images.length > 0" class="carousel-inner">
+            <div *ngFor="let imgLink of product.images" class="carousel-item" data-bs-interval="2500">
+                <img [src]="imgLink" class="d-block w-100" [alt]="product.name">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>

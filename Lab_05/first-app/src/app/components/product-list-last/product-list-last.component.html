@@ -1,0 +1,11 @@
+
+<div class="products__main">
+    <h1>All the products from category {{ current_category?.name }}: </h1>
+    <div class="products__container">
+        <app-product-item
+            *ngFor="let product of category_products"
+            [product]="product"
+        ></app-product-item>
+    </div>
+</div>
+

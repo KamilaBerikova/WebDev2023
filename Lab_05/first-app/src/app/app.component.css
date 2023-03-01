@@ -1,0 +1,21 @@
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#categories__list {
+    width: 30vw;
+}
+
+#categories__navigation {
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.category__link:hover {
+    transition: all 1s;
+    font-size: 22px;
+    font-weight: bold;
+}

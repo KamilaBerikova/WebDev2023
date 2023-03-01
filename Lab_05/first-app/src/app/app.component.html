@@ -1,0 +1,24 @@
+<app-top-bar></app-top-bar>
+
+<nav id="categories__navigation">
+    <ul type="none" id="categories__list">
+      <h2>All categories:</h2>
+      <li class="category__item"
+        *ngFor="let category of categories"
+      >
+        <a class="category__link"
+          [routerLink]="['/categories', category.id]"
+        >{{ category.name }}</a>
+      </li>
+    </ul>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
