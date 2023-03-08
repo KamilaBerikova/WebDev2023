@@ -1,0 +1,11 @@
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}

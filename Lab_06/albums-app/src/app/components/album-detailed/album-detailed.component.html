@@ -1,0 +1,20 @@
+<div id="album__form" *ngIf="album">
+    <div class="form__row">Album ID: {{ album.id }}</div>
+    <div class="form__row">Title: {{ album.title }}</div>
+    <div class="form__row"
+    >
+        <input 
+          type="text"
+          [(ngModel)]="album.title"
+          name="alb__title"
+          id="alb__title"
+        >
+        <button (click)="saveBtnClick(album.title)">Save</button>
+    </div>
+    <div class="form__row">
+        <a routerLink="/albums"><button>Return back</button></a>
+    </div>
+    <div class="form__row">
+        <a [routerLink]="['/albums', album.id, 'photos']">Photos</a>
+    </div>
+</div>

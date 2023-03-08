@@ -1,0 +1,15 @@
+.album-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+#photos__container {
+    display: felx;
+    text-align: center;
+}
+
+a {
+    margin: 50px 0;
+}

@@ -1,0 +1,6 @@
+<div id="photos__container">
+    <a [routerLink]="['/albums', albumId]"><button>Return back</button></a>
+    <div class="album-photos">
+        <img *ngFor="let albPhoto of albumPhotos" [src]="albPhoto.url">
+    </div>
+</div>
